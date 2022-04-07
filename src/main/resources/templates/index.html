@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layout/main.html">
+    <div layout:fragment="mainContentPage">
+        <div class="row mt-3">
+            <div class="col-12">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Projects</th>
+                        <th>Start date</th>
+                        <th>Completion date</th>
+                        <th>Status</th>
+                        <th>Priority</th>
+                        <th width="7%">DETAILS</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="pr: ${projects}">
+                        <td th:text = "${pr.id}"></td>
+                        <td th:text = "${pr.getName()}"></td>
+                        <td th:text = "${pr.getStartDate()}"></td>
+                        <td th:text = "${pr.getCompletionDate()}"></td>
+                        <td th:text = "${pr.getStatus()}"></td>
+                        <td th:text = "${pr.getPriority()}"></td>
+                        <td>
+                            <a th:href="@{'/projectdetails/' + ${pr.id} + '.html'}" class="btn btn-primary btn-sm">DETAILS</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</html>
