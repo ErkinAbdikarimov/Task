@@ -40,5 +40,4 @@ Dependencies
 - thymeleaf
 - lombok
 
-
-
+Used Bootstrap
