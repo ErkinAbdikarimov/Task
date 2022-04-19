@@ -1,5 +1,5 @@
 # Task
-without Swagger 
+without Spring Security, Rest, Swagger 
 #### DataBase: PostgreSql
 POJO classes (file name model): Project, Task 
 
